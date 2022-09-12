@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex08</title>
+</head>
+
+<body>
+    <script> { }
+        elementos = ["papel", "pedra", "tesoura"]
+        player1 = elementos[Math.floor(Math.random() * 3)]
+        player2 = elementos[Math.floor(Math.random() * 3)]
+
+        document.write(`<img src="img/${player1}.jpg" alt="">`)
+        document.write(`<img src="img/${player2}.jpg" alt="">`)
+
+        if (player1 === "pedra") {
+            if (player2 === "tesoura") {
+                document.write(`<h1>Player 1 venceu.<br>Pedra quebra tesoura</h1>`)
+            } else if (player2 === "papel") {
+                document.write(`<h1>Player 2 venceu.<br>Papel envolve a Pedra.</h1>`)
+            } else if (player2 === "pedra") {
+                document.write("<h1>Empate</h1>")
+            }
+        }
+
+        else if (player1 === "tesoura") {
+            if (player2 === "pedra") {
+                document.write(`<h1>Player 2 venceu.<br>Pedra quebra tesoura</h1>`);
+            } else if (player2 === "papel") {
+                document.write("<h1>Player 1 venceu.<br>tesoura corta papel</h1>");
+            } else if (player2 === "tesoura") {
+                document.write("<h1>Empate</h1>");
+            }
+        }
+
+        else if (player1 === "papel") {
+            if (player2 === "pedra") {
+                document.write("<h1>Player 1 venceu.<br>Papel envolve pedra</h1>");
+            } else if (player2 === "tesoura") {
+                document.write("<h1>Player 2 venceu.<br>Tesoura corta papel</h1>");
+            } else if (player2 === "papel") {
+                document.write("<h1>Empate</h1>");
+            }
+
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

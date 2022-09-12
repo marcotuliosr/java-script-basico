@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>exercicio02</title>
+</head>
+<body>
+<script>
+    texto = prompt("Informe um TEXTO qualquer :");
+    palavra = prompt("Informe uma PALAVRA qualquer :");
+
+    quebraPalavra = texto.split(" ");
+    cont = quebraPalavra.indexOf(quebraPalavra);
+
+    for (i = 0; i < quebraPalavra.length; i++) {
+        digitado = quebraPalavra[i];
+        if (digitado == palavra)
+            document.write(`<p>${digitado}</p>`);
+    }
+    document.write(`Número de ocorrências:${cont}`);
+
+
+</script>
+</body>
+</html>

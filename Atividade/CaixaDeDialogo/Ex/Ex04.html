@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex04</title>
+</head>
+
+<body>
+    <script>
+        nota1 = prompt("Qual a sua nota do 1* Bimestre: ");
+        nota2 = prompt("Qual a sua nota do 2* Bimestre: ");
+
+        notaTotal = parseFloat(nota1) + parseFloat(nota2);
+        if (notaTotal >= 60) {
+            alert("Aluno aprovado");
+        }
+        else {
+            alert("Aluno reprovado , faltou " + (60.0 - notaTotal) + " pontos");
+        }
+
+    </script>
+</body>
+
+</html>

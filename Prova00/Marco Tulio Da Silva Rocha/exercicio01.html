@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>exercicio01</title>
+</head>
+<body>
+<script>
+    valor1 = parseInt(prompt(`Digite o primeiro valor: `));
+    valor2 = parseInt(prompt(`Digite o primeiro valor: `));
+
+    calculo = prompt(`Digite qual operação fazer  +, -, * , / : `);
+
+    if (calculo == "+") {
+        total = valor1 + valor2;
+        document.write(`${total}`);
+    } else if (calculo == "-") {
+        total = valor1 - valor2;
+        document.write(`${total}`);
+    } else if (calculo == "*") {
+        total = valor1 * valor2;
+        document.write(`${total}`);
+    } else if (calculo == "/") {
+        total = valor1 / valor2;
+        document.write(`${total}`);
+    } else {
+        document.write("Valor invalido digitado")
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicacao02</title>
+</head>
+
+<body>
+    <script>
+
+        do {
+            nota1 = parseFloat(prompt("Nota 1 (entre 0 e 50):"));
+        } while (nota1 < 0 || isNaN(nota1) || (nota1 > 50) || nota1 == null) {
+
+        }
+
+        do {
+            nota2 = parseFloat(prompt("Nota 2 (entre 0 e 50):"));
+        } while (nota2 < 0 || isNaN(nota2) || (nota2 > 50) || nota2 == null) {
+
+        }
+
+        notaFinal = nota1 + nota2;
+
+        mediaFinal = notaFinal / 2;
+
+
+        if (notaFinal >= 60) {
+            document.write(`<p><span style="color:blue">APROVADO</span> com ${notaFinal} pontos</p>`);
+            document.write(`<p> Nota media entre os bimestres : ${mediaFinal.toFixed(2)} pontos`);
+        }
+        else {
+            document.write(`<p>Notal final: ${notaFinal}</p>`);
+            document.write(`<p>Situacao: <span style="color:red">REPROVADO</span></p>`)
+            document.write(`<p>Faltou(ram) ` + (60.0 - notaFinal) + ` pontos para ser aprovado</p>`);
+            document.write(`<p> Nota media entre os bimestres : ${mediaFinal.toFixed(2)} pontos`);
+        }
+
+
+    </script>
+
+</body>
+
+</html>

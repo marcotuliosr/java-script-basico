@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex09</title>
+</head>
+<body>
+<script>
+    digitado = prompt(`Digite um texto: `);
+    digitado = digitado.toLowerCase();
+    digitadoNew = digitado.replace(/[^a-z0-9]/gi, '')
+    firstArray = digitadoNew.split("");
+    secondArray = firstArray.reverse("");
+    secondArray = secondArray.join("");
+    if (digitadoNew == secondArray) {
+        alert(`O texto e palíndromo.`);
+    } else {
+        alert(`O texto não e palíndromo`);
+    }
+</script>
+</body>
+</html>

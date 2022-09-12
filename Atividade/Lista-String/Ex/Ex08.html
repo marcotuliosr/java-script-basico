@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex08</title>
+</head>
+
+<body>
+<script>
+
+    texto = prompt("Digite um texto: ");
+
+    vetor = texto.split(" ");
+    vetorLetras = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "x", "z"]
+
+    for (i = 0; i < vetorLetras.length; i++) {
+        letra = vetorLetras[i];
+        for (j = 0; j < vetor.length; j++) {
+            if (vetor[j].charAt(0) == letra)
+                document.write(`${vetor[j]}`)
+        }
+
+        document.write(`<p></p>`)
+    }
+
+
+</script>
+</body>
+
+</html>

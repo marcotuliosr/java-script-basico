@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>exercicio03</title>
+</head>
+<body>
+<script>
+    texto = prompt("Informe um texto qualquer: ");
+    config = parseInt(prompt("Que configuração você quer aplicar (1) itálico, (2) negrito ou (3) sublinhado:"));
+
+    if (config == 1) {
+        document.write(`<i>${texto}</i>`);
+    } else if (config == 2) {
+        document.write(`<b>${texto}</b>`);
+    } else if (config == 3) {
+        document.write(`<u>${texto}</u>`);
+    } else {
+        document.write("Valor invalido")
+
+    }
+</script>
+</body>
+</html>
