@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        form {
+            border: 1px solid black;
+            width: 250px;
+            margin: auto;
+            padding: 10px;
+        }
+
+        input[type="button"] {
+            display: block;
+            width: 100px;
+            margin: auto;
+            margin-top: 10px;
+        }
+
+        input[type="text"] {
+            width: 90%;
+        }
+        .errorMsg {
+            color: red;
+            font-size: 10px;
+        }
+         span {
+             display:block;
+         }
+    </style>
+    <script>
+        // function enviar() {
+        //     txt = document.getElementNyId("nome");
+        //
+        //     if (!txt.value) {
+        //         alert("Nome vazio ! Favor digitar um nome.");
+        //     } else {
+        //         alert("Cadastro realizado com sucesso.")
+        //     }
+
+        // function validate() {
+        //     nome = document.getElementById("txtNome");
+        //     if (!nome.value) {
+        //         document.getElementById("errorNome").innerHTML = "Nome invalido.Tente novamente!";
+        //         nome.focus();
+        //     }
+        // }
+        //
+        // function limparErrorMsgNome() {
+        //     document.getElementById("errorNome").innerHTML = "";
+        //     document.getElementById("errorNome").focus();
+        //
+        // }
+        //
+        // function limparErrorMsgEndereco() {
+        //     document.getElementById("errorEndereco").innerHTML = "";
+        //     document.getElementById("errorEndereco").focus();
+        //
+        // }
+
+
+        // function validate() {
+        //     inputs = document.getElementsByTagName("input");
+        //     for (i = 0; i < inputs.length; i++) {
+        //         if ((inputs[i].type == "text") && (inputs[i].value == ""))
+        //             alert(`${inputs[i].name} está em branco`)
+        //     }
+        // }
+
+        function validate() {
+            tipos = ["TEXT", "NUMBER", "TEL"];
+            inputs = document.getElementsByTagName("input");//5 inputs
+            for (i = 0; i < inputs.length; i++) {
+                if (tipos.includes(inputs[i].type.toUpperCase()) && (inputs[i].value == ""))
+                    document.getElementById(`${inputs[i].name}ERROR`).innerHTML = `${inputs[i].name} está em branco. Tente novamente!`;
+            }
+        }
+    </script>
+</head>
+<body>
+<form>
+    <label for="txtNomme">Nome:</label>
+    <input type="text" name="NOME" id="txtNome">
+    <span id="NOMEERROR" class="errorMsg"></span>
+
+    <label for="txtEndereco">Endereco:</label>
+    <input type="text" name="ENDERECO" id="txtEndereco">
+    <span id="ENDERECOERROR" class="errorMsg"></span>
+
+    <label for="txtTelefone">telefone:</label>
+    <input type="tel" name="TELEFONE" id="txtTelefone">
+    <span id="TELEFONEERROR" class="errorMsg"></span>
+
+    <label for="txtIdade">Idade:</label>
+    <input type="number" name="IDADE" id="txtTelefone">
+    <span id="IDADEERROR" class="errorMsg"></span>
+
+    <input type="button" value="Enviar" onclick="validate()">
+
+</form>
+</body>
+</html>
