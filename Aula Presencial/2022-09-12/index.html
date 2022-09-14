@@ -26,13 +26,15 @@
         input[type="text"] {
             width: 90%;
         }
+
         .errorMsg {
             color: red;
             font-size: 10px;
         }
-         span {
-             display:block;
-         }
+
+        span {
+            display: block;
+        }
     </style>
     <script>
         // function enviar() {
@@ -85,7 +87,7 @@
 </head>
 <body>
 <form>
-    <label for="txtNomme">Nome:</label>
+    <label for="txtNome">Nome:</label>
     <input type="text" name="NOME" id="txtNome">
     <span id="NOMEERROR" class="errorMsg"></span>
 
@@ -98,7 +100,7 @@
     <span id="TELEFONEERROR" class="errorMsg"></span>
 
     <label for="txtIdade">Idade:</label>
-    <input type="number" name="IDADE" id="txtTelefone">
+    <input type="number" name="IDADE" id="txtIdade">
     <span id="IDADEERROR" class="errorMsg"></span>
 
     <input type="button" value="Enviar" onclick="validate()">
