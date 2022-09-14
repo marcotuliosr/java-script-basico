@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        function resultado() {
+            total = parseFloat(document.getElementById("primeiroBimestre").value)
+                + parseFloat(document.getElementById("segundoBimestre").value)
+            pontoTotal = total - 60;
+
+            if (primeiroValor > 50.0 || segundoValor > 50.0) {
+                alert("Valor invalido! Digite um valor entre (0.0 - 50.0)")
+            } else {
+                if (total >= 60.0) {
+                    alert("Aluno Aprovado! Parabens !!! Nota Final : " + total);
+                } else {
+                    alert("Aluno reprovado! Faltou " + pontoTotal + "pontos");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<form>
+    <label for="primeiroBimestre">Nome (1º Bimestre):</label>
+    <input type="number" id="primeiroBimestre"><br>
+    <label for="segundoBimestre">Nome (2º Bimestre):</label>
+    <input type="number" id="segundoBimestre"><br>
+    <input type="button" value="Resultado" onclick="resultado()"><br>
+</form>
+</body>
+</html>

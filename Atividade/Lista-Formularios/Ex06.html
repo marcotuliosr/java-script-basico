@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function soma() {
+
+            primeiroValor = parseInt(document.getElementById("primeiroValor").value);
+            segundoValor = parseInt(document.getElementById("segundoValor").value);
+            document.getElementById("resultado").value = primeiroValor + segundoValor;
+        }
+
+        function subtrai() {
+            primeiroValor = parseInt(document.getElementById("primeiroValor").value);
+            segundoValor = parseInt(document.getElementById("segundoValor").value);
+            document.getElementById("resultado").value = primeiroValor - segundoValor;
+        }
+
+        function multiplica() {
+            primeiroValor = parseInt(document.getElementById("primeiroValor").value);
+            segundoValor = parseInt(document.getElementById("segundoValor").value);
+            document.getElementById("resultado").value = primeiroValor * segundoValor;
+        }
+
+        function divide() {
+            primeiroValor = parseInt(document.getElementById("primeiroValor").value);
+            segundoValor = parseInt(document.getElementById("segundoValor").value);
+            document.getElementById("resultado").value = primeiroValor / segundoValor;
+        }
+    </script>
+</head>
+<body>
+<form>
+    <h3>Calculadora</h3>
+    <label for="primeiroValor">1º Valor:</label>
+    <input type="number" id="primeiroValor"><br>
+    <label for="segundoValor">2º Valor:</label>
+    <input type="number" id="segundoValor"><br>
+    <input style="margin-right: 10px;" type="button" value="+" onclick="soma()">
+    <input style="margin-right: 10px;" type="button" value="-" onclick="subtrai()">
+    <input style="margin-right: 10px;" type="button" value="*" onclick="multiplica()">
+    <input style="margin-right: 10px;" type="button" value="/" onclick="divide()"><br>
+    <label for="resultado">Resultado:</label>
+    <input type="number" id="resultado"><br>
+</form>
+</body>
+</html>

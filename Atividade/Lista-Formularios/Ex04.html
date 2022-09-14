@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        function resultado() {
+            primeiroValor = parseInt(document.getElementById("primeiroBimestre").value);
+            segundoValor = parseInt(document.getElementById("segundoBimestre").value);
+
+            if (primeiroValor > 50.0 || segundoValor > 50.0) {
+                alert("Valor invalido! Digite um valor entre (0.0 - 50.0)")
+            } else {
+                if (primeiroValor + segundoValor >= 60.0) {
+
+                    alert("Aluno Aprovado! Parabens !!! ");
+
+                } else {
+                    alert("Aluno reprovado! Estude mais");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<form>
+    <label for="primeiroBimestre">Nome (1º Bimestre):</label>
+    <input type="number" id="primeiroBimestre"><br>
+    <label for="segundoBimestre">Nome (2º Bimestre):</label>
+    <input type="number" id="segundoBimestre"><br>
+    <input type="button" value="Resultado" onclick="resultado()"><br>
+</form>
+</body>
+</html>

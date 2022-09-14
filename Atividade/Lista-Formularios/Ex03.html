@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function multiplicador() {
+            valor = document.getElementById("valor").value;
+            document.getElementById("dobro").value = valor*2;
+        }
+    </script>
+</head>
+<body>
+<form>
+    <label for="valor">Digite um valor:</label>
+    <input type="text" id="valor"><br>
+
+    <input type="button" value="Mostrar o dobro" onclick="multiplicador()"><br>
+
+    <label for="dobro">Dobro do valor:</label>
+    <input type="text" id="dobro"><br>
+
+
+</form>
+</body>
+</html>
